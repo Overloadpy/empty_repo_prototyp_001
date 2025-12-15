@@ -73,12 +73,12 @@ async def get_portfolio():
             
             holdings_data.append({
                 "symbol": symbol,
-                "quantity": holding["quantity"],
-                "avg_price": holding["avg_price"],
-                "current_price": stock_data["current_price"],
-                "current_value": current_value,
-                "pnl": pnl,
-                "pnl_percent": ((stock_data["current_price"] - holding["avg_price"]) / holding["avg_price"]) * 100
+                "quantity": int(holding["quantity"]),
+                "avg_price": float(holding["avg_price"]),
+                "current_price": float(stock_data["current_price"]),
+                "current_value": float(current_value),
+                "pnl": float(pnl),
+                "pnl_percent": float(((stock_data["current_price"] - holding["avg_price"]) / holding["avg_price"]) * 100)
             })
     
     portfolio["total_value"] = total_value

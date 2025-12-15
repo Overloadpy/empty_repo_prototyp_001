@@ -54,13 +54,13 @@ class RVOLScanner:
             
             return {
                 'symbol': symbol,
-                'rvol': rvol,
-                'current_price': current_price,
-                'price_change_pct': price_change_pct,
-                'volume': hist['Volume'].iloc[-1],
-                'high': hist['High'].iloc[-1],
-                'low': hist['Low'].iloc[-1],
-                'open': hist['Open'].iloc[-1]
+                'rvol': float(rvol),
+                'current_price': float(current_price),
+                'price_change_pct': float(price_change_pct),
+                'volume': int(hist['Volume'].iloc[-1]),
+                'high': float(hist['High'].iloc[-1]),
+                'low': float(hist['Low'].iloc[-1]),
+                'open': float(hist['Open'].iloc[-1])
             }
         except Exception as e:
             logger.error(f"Error processing {symbol}: {str(e)}")
