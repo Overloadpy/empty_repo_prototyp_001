@@ -1,0 +1,9 @@
+OpenBLAS WARNING - could not determine the L2 cache size on this system, assuming 256k
+INFO:     Started server process [1059]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+ERROR:yfinance:$HDFC.NS: possibly delisted; no price data found  (period=100d) (Yahoo error = "No data found, symbol may be delisted")
+WARNING:scanner.rvol_scanner:Not enough data for HDFC.NS
+INFO:     127.0.0.1:35284 - "GET /api/stocks HTTP/1.1" 200 OK
+INFO:     127.0.0.1:35290 - "GET /api/portfolio HTTP/1.1" 200 OK
